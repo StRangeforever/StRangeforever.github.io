@@ -1614,7 +1614,7 @@ const GAME = {
       "label": "\"형이 먼저 씻을게\"",
       "desc": "형 노릇",
       "aff": {
-       "love": -3,
+       "love": -15,
        "wary": 5
       },
       "reply": [
@@ -4311,6 +4311,10 @@ const DRIVE_FALLBACK = {
   '니코스탠딩_장난': '1gtZ3r8AuSNrkNkNs_VrOTE7xbDlHrr-U',
   '니코스탠딩_진지': '1Ee55m29OnwACVvemvgMAjAePIGdd1deQ'
 };
+/* 깃허브에 같이 올려 둔 사진 사본 (img/파일ID.webp) — 구글이 막히는 브라우저/계정에서도 사진이 뜨게 */
+const LOCAL_IMG = {"ch05_선4.9_니코": "1J9iXgMlz-lp3LHQaNYuTNNW3NBI-pyRa", "ch05_선4.4_주주": "19HB-i25X8W78D4zwLq2rJ1clOvel3Ssx", "ch05_선4.6_주주": "1TsFSwBd6m-N0a8fkT_1mJQjE3bgkRV1k", "ch05_선4.11_주주": "189zyeJwM643ZvndGXbYkIiFqxQQfvV1g", "ch05_선4.10_니코": "13OzrZMhCATGTStg36gyRilMdYTXOkCsX", "ch05_선4.2_주주": "1u977Ua4S-G4WX4Rc12xwtyNwuRuMjcvp", "ch05_선4.18_니코": "11YnrYDklyhvc4FLf9KLG9iAlXWGNq6V-", "ch05_선4.1_니코": "1UuLrQ3yD9p48IbBwtqQZpjJalJ_3Imh4", "ch05_선4.5_니코": "1fLo1KmoNF7tH1WfOL53mOeLYzMVuhDOb", "ch05_선4.16_주주": "1ARqeQYpu9gARcBkqaDLztN8KumYr7lL6", "ch05_선4.17_주주": "1jkfQrf7HttXO_LfvZu0b31PNDyZ3DniH", "ch14_선2.5_주주": "1BshYi6uNJOl-8PHkH1crlw-WHkoJ4I_K", "ch13_본13_하루아": "1aDotKZ_9j9vgjg0NXfTmwDbS18zRmKTE", "ch13_선1.2_하루아": "1dVtr-vgoi_Ec48I41_Oj_vdkREwJHK9i", "ch13_선1.6_니코": "1gwjKXYiTBAxAbPiUriN1LKBWBpm6q1xS", "ch13_선1.5_주주": "1tC-i3QXtzJAGSefNTcu2YSAEtyz9nr7k", "ch13_선1.7_주주": "1Ay_GvtAij__QfHYXk3CKRX4_2AGXtkj2", "ch13_본14_주주": "1ByzTEFKTpK1GTBj8JGk8JCeXJ_gZOAnO", "ch13_본12_주주": "1jPNRxIenR3rRxR87yrqZHpyKc5vR0LAD", "ch11_선2.2_주주": "10Ofqe0vDGaJ29P0H7fhtAoTKWQ08YDB6", "ch11_선3.1_주주": "1ZqgNRXsCSm7zdsPn6oOMHBgk4NWhN1Rd", "ch11_선2.1_주주": "1fO5DGMK3t59NXgwrpYSMEZtC85W8_VQr", "ch11_본2_주주": "1Un2T5oeHVKXpXDbGx4AySmbjQqKgWSEE", "ch11_본3_주주": "1dB0n_CH9V53fXIRcEqKdG5aqevDlsV7Z", "ch09_선2.1_주주": "1g5aEtgkpGc0iqRYY-c8pzT-Eva4fs96g", "ch09_선3.1_주주": "1289NWI8yrdA3yqs6gHIZ-IRuurLzEiO0", "ch09_선2.2_주주": "1kkSmdpcTrhJWYASq1_O_agW5Gixiyyp_", "ch09_본4_주주": "1hB7ikvQx1Bfc5QbAck194HtAJoC8PxT-", "ch09_선1.1_주주": "1Yd2KNKPh3KDXrE4PcDl6Brgmhxf-wWQP", "ch09_본2_주주": "1xnoB-5G_nSCePr272hAWGv7I0mhVZbgT", "ch08_본2_주주": "1GkKcNnbqLcPgBgUsh07URLkBNEKe-c-2", "ch08_본3_주주": "1XV8dYqfPh90ngi-cSb0dAjGiU4FSQ4VI", "ch07_본9_니코": "1_ixyZIqMsRpVZyjUvqqmzC34FtFtJWVT", "ch08_본4_니코": "1lmdqNYVVRbxRAaObW9G_G4it-TPplI8f", "ch07_본7_니코": "1Oz_-gDGyFNezmx6wAot61nFMMqMsRWtJ", "ch07_본4_니코": "1JC5ZiDJUUNfCu4-Y8aZD5fT5lGoGDyyS", "ch06_선2.1_주주": "1KrJtXiHd-4WoLPIrv8UwEasbWYRMHIXt", "ch06_본6_니코": "19BoBzIfkGpzLUauVMUV1wb3CNSumcmPI", "ch06_선1.2_니코": "1CHFTb5C1UkzupjIodqc5CUAN9bjv7IKb", "ch07_본10_주주": "1HiPJtl064DO_rcjQt7Qx5Loa-BckoUhm", "ch06_본9_주주": "1UYKOqxPJk1nUt6RHxBzh07Gnxi3LiyoL", "ch06_본5_주주": "1ajBkXe1M6oyZcg6uLiw6ljGWQqdt5wTe", "ch06_선3.1_ 주주": "1mGY_2qqq_Gb1lqPCe-G0wnVB4EcKeP05", "ch06_본7_주주": "1qaliQAOUvj3Dv0lHM-P4X55Wg6gNYab8", "ch06_본8_니코": "19VYopyqz8kS7SvanxAL5eGVtm04vlPcn", "ch06_본4_니코": "1JJ4IyVxjCn8f9G7_p2hAgU3mSipoPkfF", "ch06_본3_주주": "1A1f7btEPoTYyrFtSeYLuLYF2ck7t9yuK", "ch06_본2_니코": "1FRDtratyqCBmUHBZzAWVvcU0qE318zMe", "ch08_선1.3_니코": "13s7KS2GjAhKDDzsFAeJ4QwRxZsbUdhRD", "ch04_선2.1_니코": "19HYk3gffCdTMb9DHE7IMvsP1A4aYgTtN", "ch04_선2.3_니코": "1DETsu7KnJcFwC44AbsIp6jSayREKTIfT", "ch11_선1.2_니코": "1VXctIGfRHY7aGXlg9F-FnV3m12CryvIs", "ch05_본3_니코": "1tIOdMSSPxoHfETQAZDzlm5DTO6CvV9gR", "ch04_선2.6_주주": "1AXUIZTPiGqB4Pp_PXnxmcSemOG6VyRns", "ch04_선2.2_주주": "1bnj_Fs8opD6hpbp8pYkhGDlwp3k3z7Xq", "ch04_선1.2_주주": "1WKxXVAQlEXZPC4LM9tlhTClmB7bKx58b", "ch07_선1.2_": "10Z71wsnzkMUWXbtETxOCUVr2ftq_oS41", "ch08_선2.4_주주": "1AAvSnSHSajtPyjgGDZkgXazyf5kDBSmP", "ch07_선3.1_주주": "1HM_hp0VfF8d9Ue_NC1B1Gj1f6smT_hWK", "ch07_선3.2_주주": "1J2RsTHGEUnMsoIPjomUoQeryLoFJHmoY", "ch05_선1.1_주주": "1LyojQyN9GBlzgJDUyGkinEqHzgQPJ_L5", "ch04_선1.1_주주": "1QV_1Qw0LGj7DPugelaUVSKRGDCs3fTcY", "ch08_선2.2_주주": "1R7ZOy4q9mDM6GowUQze5iIC_gsXxfALY", "ch07_선2.3_주주": "1RcQKM4fXmWC5598sKgAux_ksLSA0MUdq", "ch07_선1.1_주주": "1jBQLnIx3no44qIbJ5QRdAR13duR3ywF9", "ch04_본5_주주": "1SwvNkxLQYgOUu4mJcA97Dm0QwIG6xrtw", "ch04_본2_주주": "1uALeN8PsrC1ySB9xVateIKkW2wlst1Xu", "ch03_본04_니코": "1SV3hyA-txahkzGTzHoWY8yijj8VlfXMq", "ch03_선1.2_주주": "1F8rzZZfJFBCpSw2ZQzWp1fqornkh4wKo", "ch03_선2.1_주주": "1hEij4KJMbUDtUp96d9NMZLQ0rIo6B7cu", "ch03_본03_주주png": "1KzIiqHJTJ5u3ZBJXN3_hEU0Z3kbA1myB", "ch03_선3.1_주주": "1erSoVwCtCYDenR-aYUK9NxeFSlWX1bG0", "ch08_선3.1_주주": "1oFTah1bJrpti--SO9tM2wwq5bJBk9C5_", "ch03_선1": "1a8ZnL_UEBOjJfe-OCnK8tzelOjCftcTG", "ch02_본02_주주": "1a4adAUhRqjiT24tkHEKEQ1yZi48rRa1c", "ch02_본04_주주": "1bwl8RfINqL4FE40pBJ3wHqHIXH9V2O44", "ch02_본03_니코": "12XS_H1A-gC-E3aQjTx6lQGW-gO8Taboo", "ch02_선1.2_니코 복사본 2": "1CqKfXRRtpUjCmNX6DAJy-NNeen6nEccJ", "ch01_본05_니코": "1OCku47pKebQbO-cFJhgwqNvbk_Jb_4EW", "ch02_선1.1_니코 복사본": "1aWQgr_LdzoliwPihvgrVYjokIgGmj47e", "ch01_선3.1_주주": "1YFnD59OEE-v0v2lxkEDs1OAqK0ViYK-R", "ch01_선2.1_주주": "10Rc-iBUD-ZSa0sMeXixOoXOBq24GVgi9", "ch01_본06_주주": "1T3yLMbpawMWHtF6G7gQQLUfGEUbKlAkl", "ch01_본04_주주": "1qigLUZ9zudUWJ5sKfY_ePyOxFEXwzdtI", "ch01_본03_주주": "1z2fV9QKM79Sft_6zxi2weo5CZ4YqcRbN", "니코스탠딩_기본": "1Xskqols4NTanmiHo3P_Wdc8DpOpY4lc_", "니코스탠딩_진지": "1Ee55m29OnwACVvemvgMAjAePIGdd1deQ", "니코스탠딩_장난": "1gtZ3r8AuSNrkNkNs_VrOTE7xbDlHrr-U", "니코스탠딩_웃음": "1TecOkbJEIaur_fwWnIfKA9X7fjquXWon", "니코스탠딩_시무룩": "1tAZA9iLRvzLBK0bmI8gWcJ3njSRha2Pe", "니코스탠딩_당황": "1vjhYOL0pcMcXsngVmMO5w4FjpjnC8gk9", "니코스탠딩_놀람": "1JmMPrBfqArbZm0IMhUXhISo35QHKOod7", "주주스탠딩_장난2": "1Y0Bijb9rifd3xFW9LNkQhwAzd2Iheylv", "케이형_스탠딩": "1j_tI9uUUy37S98mIRthhUsuJpFr-7Rhj", "주주스탠딩_기본": "13BvexwnSAYoVXlD0tAs98xncbhGn4GoF", "주주스탠딩_웃음": "1FEv0j4y89u1tiOs48dfkZ52cmtuZQJM0", "주주스탠딩_화남": "1fIFeeifXyNqNY_uP1jJM72r0tXK_fWrM", "주주스탠딩_장난1": "1-AilI--xOD5FMsf1aPXmOvXRd_XPgJaW", "주주스탠딩_놀람": "1ECNACvz55EtLYpBLp7qfeuH-Fof8iFdK", "주주스탠딩_새드": "17knl0kZbsam6HpZxcKNyLddY6kT6CnhG", "주주스탠딩_꿀벌": "1iJ_zDDtBqx-VYXnbFMmD3O294djMOBNE", "주주스탠딩_부끄": "1lOnH-h8clIdlefxFj_peOoPt5_tHo4v-", "메인페이지_ 가상인물이미지": "1WBeerYPQZBQrUA-em8ZPq7HXL39CTE75"};
+const LOCAL_REV = {};
+addEventListener('error', e => { const t = e.target; if (!t || t.tagName !== 'IMG') return; const l = LOCAL_REV[t.getAttribute('src')]; if (l && t.getAttribute('src') !== l) t.src = l; }, true);
 const imgKey = n => String(n).normalize('NFC').replace(/\.[a-z0-9]+$/i, '').replace(/\s+/g, '').toLowerCase().replace(/^copyof/, '').replace(/(복사본\d*|\(\d+\))$/, '').replace(/(png|jpe?g|webp)$/, '');
 const imgUrl = n => IMG[imgKey(n)] || null;
 function setMainPhoto() {
@@ -4323,6 +4327,7 @@ function rerenderCast() {
 }
 function loadDriveImages() {
   for (const n in DRIVE_FALLBACK) IMG[imgKey(n)] = 'https://lh3.googleusercontent.com/d/' + DRIVE_FALLBACK[n] + '=w' + IMG_SIZE;
+  if (location.protocol !== 'file:') for (const n in LOCAL_IMG) IMG[imgKey(n)] = 'img/' + LOCAL_IMG[n] + '.webp';
   setMainPhoto(); rerenderCast();
   if (!DRIVE_API) return;
   const cb = '__chocoImg' + Date.now(), sc = document.createElement('script');
@@ -4330,7 +4335,7 @@ function loadDriveImages() {
   window[cb] = data => {
     done();
     const f = (data && data.files) || {};
-    for (const n in f) IMG[imgKey(n)] = f[n];
+    for (const n in f) { const k = imgKey(n); if (IMG[k] && IMG[k].startsWith('img/')) LOCAL_REV[f[n]] = IMG[k]; IMG[k] = f[n]; }
     setMainPhoto(); rerenderCast();
     Object.values(IMG).forEach(u => { const im = new Image(); im.src = u; });
     const need = [MAIN_IMG, ...Object.values(FACE_IMG.A), ...Object.values(FACE_IMG.B), ...Object.values(FACE_IMG.C), '주주스탠딩_꿀벌'];
@@ -4390,7 +4395,8 @@ let bgmVol = 50; try { const v = localStorage.getItem('choco-bgm-vol'); if (v !=
 let bgmReady = null;
 function bgmLoad() {
   if (bgmReady) return bgmReady;
-  bgmReady = new Promise((ok, no) => {
+  const local = location.protocol === 'file:' ? Promise.reject() : fetch('bgm.mp3', { method: 'HEAD' }).then(r => { if (!r.ok) throw 0; return 'bgm.mp3'; });
+  bgmReady = local.catch(() => new Promise((ok, no) => {
     if (!DRIVE_API) return no();
     const cb = '__chocoBgm' + Date.now(), sc = document.createElement('script');
     const done = () => { clearTimeout(t); delete window[cb]; sc.remove(); };
@@ -4401,7 +4407,7 @@ function bgmLoad() {
     sc.onerror = () => { done(); no(); };
     sc.src = DRIVE_API + '?audio=' + encodeURIComponent(BGM_NAME) + '&callback=' + cb;
     document.head.appendChild(sc);
-  }).then(u => { bgm.src = u; }, () => { console.warn('[음악] 드라이브에서 못 받아서 bgm.mp3 사용'); bgm.src = 'bgm.mp3'; })
+  })).then(u => { bgm.src = u; }, () => { console.warn('[음악] 드라이브에서 못 받아서 bgm.mp3 사용'); bgm.src = 'bgm.mp3'; })
     .then(() => { if (bgmWant) bgmTry(); });
   return bgmReady;
 }
