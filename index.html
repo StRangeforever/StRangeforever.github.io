@@ -860,7 +860,8 @@ const GAME = {
        }
       ],
       "aff": {
-       "love": 2
+       "love": 2,
+       "wary": 6
       },
       "flag": "secret_photo"
      },
@@ -1390,7 +1391,8 @@ const GAME = {
        }
       ],
       "aff": {
-       "love": 4
+       "love": 3,
+       "wary": 5
       },
       "flag": "hyung"
      },
@@ -2008,7 +2010,8 @@ const GAME = {
        }
       ],
       "aff": {
-       "love": 5
+       "love": 3,
+       "wary": 4
       },
       "flag": "cute_cn"
      },
@@ -2510,7 +2513,7 @@ const GAME = {
       ],
       "aff": {
        "love": 4,
-       "wary": -2
+       "wary": 5
       },
       "flag": "cicada"
      },
@@ -3633,20 +3636,22 @@ const GAME = {
    "title": "형이라고 불러줘",
    "when": {
     "flags": [
-     "hyung_deal"
+     "hyung_deal",
+     "hyung"
     ],
     "any_flags": [
-     "hyung",
-     "baby"
+     "suitcase",
+     "share_bed",
+     "floor"
     ],
     "min": {
-     "love": 75
+     "love": 90
     }
    },
-   "cond_text": "\"형이라고 부르면 줄게\" + (형 호칭 또는 애기 취급) + 호감도 75↑",
+   "cond_text": "「형이라고 부르면 줄게」 + CH5 「한 번만 더 불러 봐」 + 남쪽 섬 여행 + 호감도 90↑",
    "text": "\"…니코 형. 초콜릿 주세요.\" 주주가 이를 악물고 말했다. 초콜릿을 받아 든 주주는 한 입 베어 물더니 씩 웃었다. \"근데 이거, 내년엔 형이 나한테 줘야 돼. 두 달 차이 형은 원래 그래.\" …이 녀석, 역시 배드주주다.",
    "cg": "",
-   "hint": "초콜릿을 빌미로, 평소의 그 호칭을"
+   "hint": "둘만의 여행 뒤, 초콜릿을 빌미로 그 호칭을"
   },
   {
    "id": "e_rejected",
@@ -4179,8 +4184,11 @@ function showChoice(ch) {
   if (!ch) return nextChapter();
   skip = false; $('btn-skip').setAttribute('aria-pressed', 'false');
   const box = $('choices');
-  box.innerHTML = `<div class="q">${ch.q}</div>` + ch.options.map((o, i) =>
-    `<button class="opt" data-i="${i}" style="animation-delay:${i * 0.07}s"><span class="no">${SVG[OPT_IC[i % 4]]()}</span><span><span class="lb">${o.label}</span><span class="ds">${o.desc || ''}</span></span></button>`).join('');
+  // 매번 선택지 순서를 섞어서 보여 줌 (data-i 는 원래 번호라 결과는 그대로)
+  const order = ch.options.map((_, i) => i);
+  for (let j = order.length - 1; j > 0; j--) { const r = Math.floor(Math.random() * (j + 1)); [order[j], order[r]] = [order[r], order[j]]; }
+  box.innerHTML = `<div class="q">${ch.q}</div>` + order.map((i, n) => { const o = ch.options[i];
+    return `<button class="opt" data-i="${i}" style="animation-delay:${n * 0.07}s"><span class="no">${SVG[OPT_IC[n % 4]]()}</span><span><span class="lb">${o.label}</span><span class="ds">${o.desc || ''}</span></span></button>`; }).join('');
   box.hidden = false; beep('ok');
   box.querySelectorAll('.opt').forEach(b => b.onclick = () => {
     const o = ch.options[+b.dataset.i];
