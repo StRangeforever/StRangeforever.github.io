@@ -309,6 +309,7 @@ svg.px{shape-rendering:crispEdges;display:block}
 #stand-A.img.sz-s{top:60px;bottom:-150px;width:380px}
 #stand-C.img.sz-s{top:-16px;bottom:-74px;width:380px}
 #stand-A.img.sz-u{top:30px;bottom:-90px;width:360px}
+#stand-A.img.sz-u3{top:30px;bottom:-90px;width:360px;translate:0 -35px}
 /* 주주 부끄: 혼자일 때 크게+위로 */
 #stand-A.stand.img.face-shy.pos-c:not(.sz-l):not(.sz-vm):not(.sz-bu):not(.sz-ss){top:-40px;bottom:-60px;width:600px}
 #stand-A.stand.img.face-sad{top:30px;bottom:-90px;width:360px}
@@ -948,7 +949,7 @@ const GAME = {
       "A": "c"
      },
      "size": {
-      "A": "작게위로"
+      "A": "작게위로2"
      }
     },
     {
@@ -988,14 +989,14 @@ const GAME = {
          "A": "c"
         },
         "size": {
-         "A": "작게위로"
+         "A": "작게위로2"
         }
        },
        {
         "who": "A",
         "text": "근데 왜 맨날 인사만 해? 솔직히 좀 무서웠어.",
         "size": {
-         "A": "작게위로"
+         "A": "작게위로2"
         }
        },
        {
@@ -1021,7 +1022,7 @@ const GAME = {
          "A": "c"
         },
         "size": {
-         "A": "작게위로"
+         "A": "작게위로2"
         }
        }
       ],
@@ -1042,7 +1043,7 @@ const GAME = {
          "A": "c"
         },
         "size": {
-         "A": "작게위로"
+         "A": "작게위로2"
         }
        },
        {
@@ -1077,7 +1078,7 @@ const GAME = {
          "A": "c"
         },
         "size": {
-         "A": "작게위로"
+         "A": "작게위로2"
         }
        }
       ],
@@ -1104,7 +1105,7 @@ const GAME = {
          "A": "놀람"
         },
         "size": {
-         "A": "작게위로"
+         "A": "작게위로2"
         }
        },
        {
@@ -1122,7 +1123,7 @@ const GAME = {
          "A": "웃음"
         },
         "size": {
-         "A": "작게위로"
+         "A": "작게위로2"
         }
        },
        {
@@ -4657,7 +4658,7 @@ function showLine() {
   const L = queue[qi]; undoScene(); setShow(L.show);
   if (L.face) for (const k in L.face) { const el = $('stand-' + k); if (el && el.dataset.face !== L.face[k]) { el.innerHTML = standHTML(k, L.face[k]); el.dataset.face = L.face[k]; } }
   applyScene(L._key);
-  for (const k of CAST) { const el = $('stand-' + k); el.classList.remove('sz-s', 'sz-l', 'sz-u', 'sz-u2', 'sz-vm', 'sz-cb', 'sz-cm', 'sz-bu', 'sz-pl', 'sz-nu', 'sz-cx', 'sz-ss', 'sz-md', 'sz-md2', 'sz-fb', 'sz-mu', 'sz-sw', 'sz-xs', 'sz-nx'); const z = L.size && L.size[k]; if (z) el.classList.add(z === '크게' ? 'sz-l' : z === '작게위로' ? 'sz-u' : z === '작게더위로' ? 'sz-u2' : z === '크게2' ? 'sz-cb' : z === '크게위로' ? 'sz-bu' : z === '중간' ? 'sz-md' : z === '중간작게' ? 'sz-md2' : z === '전신크게' ? 'sz-fb' : z === '중간위로' ? 'sz-mu' : z === '스웨터' ? 'sz-sw' : z === '더작게' ? 'sz-xs' : z === '니코더작게' ? 'sz-nx' : z === '기준위로' ? 'sz-nu' : z === '더크게위로' ? 'sz-cx' : z === '부끄조금작게' ? 'sz-ss' : z === '대화크게' ? 'sz-pl' : z === '조금크게' ? 'sz-cm' : z === '자판기옆' ? 'sz-vm' : 'sz-s'); }
+  for (const k of CAST) { const el = $('stand-' + k); el.classList.remove('sz-s', 'sz-l', 'sz-u', 'sz-u2', 'sz-vm', 'sz-cb', 'sz-cm', 'sz-bu', 'sz-pl', 'sz-nu', 'sz-cx', 'sz-ss', 'sz-md', 'sz-md2', 'sz-fb', 'sz-mu', 'sz-sw', 'sz-xs', 'sz-nx', 'sz-u3'); const z = L.size && L.size[k]; if (z) el.classList.add(z === '크게' ? 'sz-l' : z === '작게위로' ? 'sz-u' : z === '작게더위로' ? 'sz-u2' : z === '크게2' ? 'sz-cb' : z === '크게위로' ? 'sz-bu' : z === '중간' ? 'sz-md' : z === '중간작게' ? 'sz-md2' : z === '전신크게' ? 'sz-fb' : z === '중간위로' ? 'sz-mu' : z === '스웨터' ? 'sz-sw' : z === '더작게' ? 'sz-xs' : z === '니코더작게' ? 'sz-nx' : z === '작게위로2' ? 'sz-u3' : z === '기준위로' ? 'sz-nu' : z === '더크게위로' ? 'sz-cx' : z === '부끄조금작게' ? 'sz-ss' : z === '대화크게' ? 'sz-pl' : z === '조금크게' ? 'sz-cm' : z === '자판기옆' ? 'sz-vm' : 'sz-s'); }
   focusSpeaker(L.who);
   const bub = $('nm-bub');
   if (GAME.chars[L.who] && L.who !== 'C') { bub.hidden = false; $('nm').textContent = GAME.chars[L.who].name; $('nm-ic').innerHTML = heart('#ffffff', 14); }
