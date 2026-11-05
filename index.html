@@ -330,6 +330,7 @@ svg.px{shape-rendering:crispEdges;display:block}
 #stand-C.stand.img.sz-cx{top:-30px;bottom:-30px;width:680px}
 #stand-A.stand.img.face-shy.sz-ss{top:20px;bottom:-50px;width:480px}
 #stand-C.stand.img.sz-cm{top:50px;bottom:-60px;width:440px}
+#stand-C.stand.img.sz-nx{top:120px;bottom:-120px;width:440px}
 /* CH2 본2: 자판기 옆에 선 크기 */
 #stand-A.img.sz-vm{top:26px;bottom:-46px;width:430px;left:35%}
 .stand.img.sz-l{top:-30px;bottom:-40px;width:600px;scale:1.15;transform-origin:50% 100%}
@@ -1649,6 +1650,9 @@ const GAME = {
         },
         "show": {
          "C": "c"
+        },
+        "size": {
+         "C": "작게"
         }
        },
        {
@@ -1705,6 +1709,9 @@ const GAME = {
         },
         "face": {
          "C": "기본"
+        },
+        "size": {
+         "C": "니코더작게"
         }
        },
        {
@@ -1715,6 +1722,9 @@ const GAME = {
         },
         "show": {
          "C": "c"
+        },
+        "size": {
+         "C": "작게"
         }
        },
        {
@@ -1727,7 +1737,7 @@ const GAME = {
          "A": "c"
         },
         "size": {
-         "A": "작게위로"
+         "A": "크게위로"
         }
        },
        {
@@ -1768,7 +1778,7 @@ const GAME = {
          "A": "c"
         },
         "size": {
-         "A": "작게위로"
+         "A": "크게위로"
         }
        },
        {
@@ -1781,7 +1791,7 @@ const GAME = {
          "A": "c"
         },
         "size": {
-         "A": "작게위로"
+         "A": "크게위로"
         }
        },
        {
@@ -4648,7 +4658,7 @@ function showLine() {
   const L = queue[qi]; undoScene(); setShow(L.show);
   if (L.face) for (const k in L.face) { const el = $('stand-' + k); if (el && el.dataset.face !== L.face[k]) { el.innerHTML = standHTML(k, L.face[k]); el.dataset.face = L.face[k]; } }
   applyScene(L._key);
-  for (const k of CAST) { const el = $('stand-' + k); el.classList.remove('sz-s', 'sz-l', 'sz-u', 'sz-u2', 'sz-vm', 'sz-cb', 'sz-cm', 'sz-bu', 'sz-pl', 'sz-nu', 'sz-cx', 'sz-ss', 'sz-md', 'sz-md2', 'sz-fb', 'sz-mu', 'sz-sw', 'sz-xs'); const z = L.size && L.size[k]; if (z) el.classList.add(z === '크게' ? 'sz-l' : z === '작게위로' ? 'sz-u' : z === '작게더위로' ? 'sz-u2' : z === '크게2' ? 'sz-cb' : z === '크게위로' ? 'sz-bu' : z === '중간' ? 'sz-md' : z === '중간작게' ? 'sz-md2' : z === '전신크게' ? 'sz-fb' : z === '중간위로' ? 'sz-mu' : z === '스웨터' ? 'sz-sw' : z === '더작게' ? 'sz-xs' : z === '기준위로' ? 'sz-nu' : z === '더크게위로' ? 'sz-cx' : z === '부끄조금작게' ? 'sz-ss' : z === '대화크게' ? 'sz-pl' : z === '조금크게' ? 'sz-cm' : z === '자판기옆' ? 'sz-vm' : 'sz-s'); }
+  for (const k of CAST) { const el = $('stand-' + k); el.classList.remove('sz-s', 'sz-l', 'sz-u', 'sz-u2', 'sz-vm', 'sz-cb', 'sz-cm', 'sz-bu', 'sz-pl', 'sz-nu', 'sz-cx', 'sz-ss', 'sz-md', 'sz-md2', 'sz-fb', 'sz-mu', 'sz-sw', 'sz-xs', 'sz-nx'); const z = L.size && L.size[k]; if (z) el.classList.add(z === '크게' ? 'sz-l' : z === '작게위로' ? 'sz-u' : z === '작게더위로' ? 'sz-u2' : z === '크게2' ? 'sz-cb' : z === '크게위로' ? 'sz-bu' : z === '중간' ? 'sz-md' : z === '중간작게' ? 'sz-md2' : z === '전신크게' ? 'sz-fb' : z === '중간위로' ? 'sz-mu' : z === '스웨터' ? 'sz-sw' : z === '더작게' ? 'sz-xs' : z === '니코더작게' ? 'sz-nx' : z === '기준위로' ? 'sz-nu' : z === '더크게위로' ? 'sz-cx' : z === '부끄조금작게' ? 'sz-ss' : z === '대화크게' ? 'sz-pl' : z === '조금크게' ? 'sz-cm' : z === '자판기옆' ? 'sz-vm' : 'sz-s'); }
   focusSpeaker(L.who);
   const bub = $('nm-bub');
   if (GAME.chars[L.who] && L.who !== 'C') { bub.hidden = false; $('nm').textContent = GAME.chars[L.who].name; $('nm-ic').innerHTML = heart('#ffffff', 14); }
